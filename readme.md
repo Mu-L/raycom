@@ -46,7 +46,7 @@ I have tested pub/sub data across regions, TW & US, usually the data will be ava
 
 ##### When to consider this solution
 
-- Firebase / GA native pipeline has a delay up to 72 hours
+- Firebase / GA native pipeline may have a delay up to [48 hours](https://firebase.google.com/docs/perf-mon/bigquery-export#enable_export)
 - Very occasional data losses, and it's hard to pinpoint the causation or fix it
 - Limited number of messages per day
 - Streaming inserts cost, this pipeline can run as batch jobs and [insert data through BigQuery Storage API](https://github.com/cloudymoma/raycom/blob/streaming/src/main/java/bindiego/BindiegoStreaming.java#LL1045C79-L1045C79)
@@ -57,6 +57,7 @@ I have tested pub/sub data across regions, TW & US, usually the data will be ava
 - There is no impact on business team at all since the data schema are the same as Firebase / GA native tables. They only see their data much more timely
 - In case you may want to migrate your old GA schema to Firebase/GA4, please use the tool [here](https://github.com/cloudymoma/gcp-playgroud-public/tree/master/BigQuery/migrate_GA2Firebase_legacy_data)
 - [How to get `user_pseudo_id` from the client SDK](https://github.com/cloudymoma/gcp-playgroud-public/blob/master/BigQuery/get_user_pseudo_id/readme.md)
+- [Import segments ](https://firebase.google.com/docs/projects/import-segments) back into Firebase for targeting users
 
 #### Quickstart 快速开始
 

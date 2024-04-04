@@ -1,0 +1,10 @@
+{ "BigQuery Schema": [
+  {
+     "name": "segment_label",
+     "type": "STRING"
+  },
+  {
+     "name": "display_name",
+     "type": "STRING"
+  }
+]}

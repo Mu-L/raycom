@@ -1,0 +1,15 @@
+{ "BigQuery Schema": [
+  {
+    "name": "instance_id",
+    "type": "STRING"
+  },
+  {
+    "name": "segment_labels",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "update_time",
+    "type": "TIMESTAMP"
+   }
+]}
