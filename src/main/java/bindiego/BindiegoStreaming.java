@@ -111,7 +111,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.joda.time.Duration;
 import org.joda.time.Instant;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import bindiego.io.WindowedFilenamePolicy;
 import bindiego.utils.DurationUtils;
