@@ -58,6 +58,8 @@
     <cmn.io.ver>2.12.0</cmn.io.ver>
     <cmn.lang3.ver>3.12.0</cmn.lang3.ver>
     <jackson.ver>2.18.1</jackson.ver>
+    <kafka.client.ver>3.7.2</kafka.client.ver>
+    <gcpkafka.auth.ver>1.0.5</gcpkafka.auth.ver>
   </properties>
 
   <repositories>
@@ -489,6 +491,22 @@
     <dependency>
         <groupId>org.apache.beam</groupId>
         <artifactId>beam-sdks-java-io-kafka</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.kafka</groupId>
+        <artifactId>kafka-clients</artifactId>
+        <version>${kafka.client.ver}</version>
+    </dependency>
+
+    <!-- Google Cloud Managed Kafka -->
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-managedkafka</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>com.google.cloud.hosted.kafka</groupId>
+        <artifactId>managed-kafka-auth-login-handler</artifactId>
+        <version>${gcpkafka.auth.ver}</version>
     </dependency>
 
     <!-- Bigtable/HBase Beam connector -->
